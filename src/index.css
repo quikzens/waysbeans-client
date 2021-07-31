@@ -230,3 +230,7 @@ body {
   font-family: 'Public Sans', sans-serif;
   color: var(--black);
 }
+
+img {
+  display: block;
+}
