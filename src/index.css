@@ -170,7 +170,6 @@ h4,
 h5,
 h6 {
   font-size: 100%;
-  font-weight: normal;
 }
 
 ul {
@@ -211,22 +210,23 @@ th:not([align]) {
 
 /* Variables */
 :root {
-  --black: #212121;
-  --brand-clr: #4caf50;
-  --purple: rgb(90, 87, 171);
-  --red: red;
-  --light-red: rgba(236, 122, 122, 0.2);
-  --orange: rgb(253, 143, 40);
-  --green: rgb(21, 231, 21);
-  --light-gray: rgb(249, 249, 249);
-  --gray: rgb(238, 238, 238);
+  --light-gray: rgba(245, 245, 245, 1);
+  --black: rgb(44, 44, 44);
+  --brown-25: rgba(97, 61, 43, 0.25);
+  --brown-50: rgba(97, 61, 43, 0.5);
+  --brown-100: rgba(246, 230, 218, 1);
+  --brown-200: rgba(219, 182, 153, 1);
+  --brown-300: rgba(151, 74, 74, 1);
+  --brown-400: rgba(97, 61, 43, 1);
+  --red: rgba(255, 7, 66, 1);
+  --green: rgba(10, 207, 131, 1);
+  --orange: rgba(255, 153, 0, 1);
+  --blue: rgba(93, 197, 182, 1);
 }
 
 /* Global */
 body {
   position: relative;
-  font-family: 'Manrope', sans-serif;
-  font-size: 18px;
-  font-weight: 900;
+  font-family: 'Public Sans', sans-serif;
   color: var(--black);
 }
