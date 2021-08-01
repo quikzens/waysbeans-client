@@ -1,7 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const CheckoutBtn = () => {
-  return <div className='checkout-btn'></div>
+  return (
+    <button className='checkout-btn'>
+      <Link to='/checkout'>Proceed to Checkout</Link>
+    </button>
+  )
 }
 
 export default CheckoutBtn

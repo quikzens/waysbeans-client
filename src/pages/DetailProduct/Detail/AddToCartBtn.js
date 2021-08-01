@@ -6,16 +6,16 @@ const AddToCartBtn = (props) => {
   const { addCart } = useContext(CartContext)
 
   // init props
-  const { productId, price } = props
+  const { productId, price, product } = props
 
-  const handleClick = (productId, price) => {
-    addCart(productId, price)
+  const handleClick = (productId, price, product) => {
+    addCart(productId, price, product)
   }
 
   return (
     <button
       className='detail-product-cta'
-      onClick={() => handleClick(productId, price)}
+      onClick={() => handleClick(productId, price, product)}
     >
       Add to Cart
     </button>

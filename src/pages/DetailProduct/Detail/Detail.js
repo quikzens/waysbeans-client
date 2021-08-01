@@ -17,7 +17,7 @@ const Detail = (props) => {
       <p className='detail-product-description'>{description}</p>
       <p className='detail-product-price'>Rp. {price}</p>
       {user.token ? (
-        <AddToCartBtn productId={_id} price={price} />
+        <AddToCartBtn productId={_id} price={price} product={props.product} />
       ) : (
         <div className='detail-product-info'>
           Hei, kamu harus login dulu sebelum order!

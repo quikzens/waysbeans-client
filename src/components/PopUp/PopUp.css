@@ -1,0 +1,15 @@
+.popup {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background-color: white;
+  padding: 1rem;
+  border: 1px solid #222;
+  transition: 0.5s ease-out;
+  opacity: 0.5;
+}
+
+.popup.show {
+  top: 30px;
+  opacity: 1;
+}

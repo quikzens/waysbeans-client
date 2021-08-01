@@ -27,7 +27,7 @@ const DetailProduct = () => {
   if (!product) return <Loading />
 
   return (
-    <div className='detail-product'>
+    <div className='detail-product flex'>
       <Image image={product.photo} name={product.name} />
       <Detail product={product} />
     </div>

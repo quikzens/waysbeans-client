@@ -5,6 +5,8 @@ import { CartContextProvider } from './contexts/CartContext'
 import Navbar from './components/Navbar/Navbar'
 import Home from './pages/Home/Home'
 import DetailProduct from './pages/DetailProduct/DetailProduct'
+import Cart from './pages/Cart/Cart'
+import Checkout from './pages/Checkout/Checkout'
 
 const App = () => {
   return (
@@ -18,6 +20,12 @@ const App = () => {
             </Route>
             <Route exact path='/product/:id'>
               <DetailProduct />
+            </Route>
+            <Route exact path='/carts'>
+              <Cart />
+            </Route>
+            <Route exact path='/checkout'>
+              <Checkout />
             </Route>
           </Switch>
         </Router>

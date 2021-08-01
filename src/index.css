@@ -234,3 +234,12 @@ body {
 img {
   display: block;
 }
+
+/* Utilities */
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
