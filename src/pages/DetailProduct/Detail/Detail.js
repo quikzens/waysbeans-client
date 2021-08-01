@@ -1,6 +1,8 @@
 import React, { useContext } from 'react'
 import { UserContext } from '../../../contexts/UserContext'
+
 import AddToCartBtn from './AddToCartBtn'
+
 import './Detail.css'
 
 const Detail = (props) => {

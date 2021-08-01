@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { useGet } from '../../../hooks/useGet'
+
 import ProductItem from './ProductItem'
 import Loading from '../../../components/Loading/Loading'
+
 import './ListProduct.css'
 
 const ListProduct = () => {

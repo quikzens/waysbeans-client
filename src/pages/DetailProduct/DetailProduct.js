@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import { useGet } from '../../hooks/useGet'
+
 import Image from './Image/Image'
 import Detail from './Detail/Detail'
 import Loading from '../../components/Loading/Loading'
+
 import './DetailProduct.css'
 
 const DetailProduct = () => {

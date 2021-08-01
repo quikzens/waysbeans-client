@@ -1,8 +1,10 @@
 import React, { useState, useContext } from 'react'
-import { CartContext } from '../../contexts/CartContext'
 import { API, configFormData } from '../../config/api'
+import { CartContext } from '../../contexts/CartContext'
+
 import OnProcess from '../OnProcess/OnProcess'
 import PopUp from '../PopUp/PopUp'
+
 import { pin } from '../../utils/icons'
 import './Form.css'
 

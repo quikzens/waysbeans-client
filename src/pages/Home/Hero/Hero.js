@@ -1,6 +1,7 @@
 import React from 'react'
-import './Hero.css'
+
 import { heroLogo, heroImage, waves } from '../../../utils/images'
+import './Hero.css'
 
 const Hero = () => {
   return (

@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import { useGet } from '../../../hooks/useGet'
+
 import Loading from '../../../components/Loading/Loading'
 import TableTransaction from './TableTransaction/TableTransaction'
-import { useGet } from '../../../hooks/useGet'
+
 import './AdminDashboard.css'
 
 const AdminDashboard = () => {

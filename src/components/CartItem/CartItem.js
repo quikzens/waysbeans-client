@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { logoSmall } from '../../utils/images'
 import './CartItem.css'
 

@@ -1,6 +1,8 @@
 import React from 'react'
+
 import CheckoutForm from '../../components/Form/Checkout'
 import ListCart from './ListCart/ListCart'
+
 import './Checkout.css'
 
 const Checkout = () => {

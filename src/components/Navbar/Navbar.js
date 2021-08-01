@@ -1,12 +1,14 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { UserContext } from '../../contexts/UserContext'
+
 import NavbarButton from './NavbarButton'
 import NavbarCart from './NavbarCart'
 import NavbarDropdown from './NavbarDropdown'
 import Modal from '../Modal/Modal'
 import Register from '../Form/Register'
 import Login from '../Form/Login'
+
 import { logo } from '../../utils/images'
 import './Navbar.css'
 

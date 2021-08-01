@@ -1,6 +1,8 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../../../contexts/CartContext'
+
 import CheckoutBtn from './CheckoutBtn'
+
 import './CheckoutInfo.css'
 
 const CheckoutInfo = () => {

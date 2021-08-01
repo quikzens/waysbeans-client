@@ -1,6 +1,8 @@
 import React from 'react'
+
 import AddNewProduct from '../../components/Form/AddNewProduct'
 import ImagePreview from './ImagePreview/ImagePreview'
+
 import './AddProduct.css'
 
 const AddProduct = () => {

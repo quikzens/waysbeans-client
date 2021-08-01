@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { close as closeIcon } from '../../utils/icons'
 import './Modal.css'
 

@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { UserContextProvider } from './contexts/UserContext'
 import { CartContextProvider } from './contexts/CartContext'
+
 import UserRoute from './routes/UserRoute'
 import AdminRoute from './routes/AdminRoute'
 import Navbar from './components/Navbar/Navbar'

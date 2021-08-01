@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { API, configFormData } from '../../config/api'
+
 import PopUp from '../PopUp/PopUp'
 import OnProcess from '../OnProcess/OnProcess'
+
 import { pin } from '../../utils/icons'
 import './Form.css'
 

@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { profilePlaceholder } from '../../../utils/images'
 import './Info.css'
 
