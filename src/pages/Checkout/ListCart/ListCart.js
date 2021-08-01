@@ -16,8 +16,8 @@ const ListCart = () => {
           <p>Total</p>
           <p>Rp. {total}</p>
         </div>
-        {carts.map((cart) => (
-          <CartItem {...cart} />
+        {carts.map((cart, index) => (
+          <CartItem {...cart} key={index} />
         ))}
       </div>
     )
