@@ -7,6 +7,8 @@ import Home from './pages/Home/Home'
 import DetailProduct from './pages/DetailProduct/DetailProduct'
 import Cart from './pages/Cart/Cart'
 import Checkout from './pages/Checkout/Checkout'
+import Profile from './pages/Profile/Profile'
+import Admin from './pages/Admin/Admin'
 
 const App = () => {
   return (
@@ -26,6 +28,12 @@ const App = () => {
             </Route>
             <Route exact path='/checkout'>
               <Checkout />
+            </Route>
+            <Route exact path='/profile'>
+              <Profile />
+            </Route>
+            <Route exact path='/admin'>
+              <Admin />
             </Route>
           </Switch>
         </Router>

@@ -26,7 +26,11 @@ export const UserContextProvider = ({ children }) => {
     setUser(userData)
     setAuthToken(userData.token)
     localStorage.setItem('user', JSON.stringify(userData))
-    window.location.href = '/'
+    if (userData.role === 'admin') {
+      window.location.href = '/admin'
+    } else {
+      window.location.href = '/'
+    }
   }
 
   const register = async (data) => {

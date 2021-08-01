@@ -243,3 +243,19 @@ img {
 .flex-column {
   flex-direction: column;
 }
+
+.d-block {
+  display: block;
+}
+
+.clr-orange {
+  color: var(--orange);
+}
+
+.clr-green {
+  color: var(--green);
+}
+
+.clr-red {
+  color: var(--red);
+}

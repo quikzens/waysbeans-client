@@ -2,15 +2,17 @@ import React, { useContext, useState } from 'react'
 import { UserContext } from '../../contexts/UserContext'
 import './Form.css'
 
-const Login = () => {
+const Login = ({ isAdmin }) => {
   const { login } = useContext(UserContext)
   const [form, setForm] = useState({
+    role: isAdmin ? 'admin' : 'user',
     email: '',
     password: '',
   })
   const [error, setError] = useState(null)
 
   const handleSubmit = async (e) => {
+    console.log(form)
     e.preventDefault()
     const msg = await login(form)
     if (msg?.error) setError(msg.error)

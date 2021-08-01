@@ -22,16 +22,22 @@ const NavbarDropdown = () => {
       </div>
       <div className={`navbar-dropdown-dropdown ${isActive ? 'show' : ''}`}>
         {user.role === 'user' && (
-          <Link className='navbar-dropdown-item' to='/profile/'>
+          <Link className='navbar-dropdown-item' to='/profile'>
             <img src={userIcon} alt='' />
             <p>Profile</p>
           </Link>
         )}
         {user.role === 'admin' && (
-          <Link className='navbar-dropdown-item' to='/addproduct'>
-            <img src={coffee} alt='' />
-            <p>Add Product</p>
-          </Link>
+          <>
+            <Link className='navbar-dropdown-item' to='/admin'>
+              <img src={userIcon} alt='' />
+              <p>Dashboard</p>
+            </Link>
+            <Link className='navbar-dropdown-item' to='/addproduct'>
+              <img src={coffee} alt='' />
+              <p>Add Product</p>
+            </Link>
+          </>
         )}
         <hr />
         <button className='navbar-dropdown-item' onClick={logout}>
