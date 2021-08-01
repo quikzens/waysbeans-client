@@ -16,12 +16,16 @@ const Detail = (props) => {
       <p className='detail-product-stock'>Stock: {stock}</p>
       <p className='detail-product-description'>{description}</p>
       <p className='detail-product-price'>Rp. {price}</p>
-      {user.token ? (
+      {user.role === 'user' ? (
         <AddToCartBtn productId={_id} price={price} product={props.product} />
       ) : (
-        <div className='detail-product-info'>
-          Hei, kamu harus login dulu sebelum order!
-        </div>
+        <>
+          {user.role !== 'admin' && (
+            <div className='detail-product-info'>
+              Hei, kamu harus login dulu sebelum order!
+            </div>
+          )}
+        </>
       )}
     </div>
   )

@@ -9,6 +9,7 @@ import Cart from './pages/Cart/Cart'
 import Checkout from './pages/Checkout/Checkout'
 import Profile from './pages/Profile/Profile'
 import Admin from './pages/Admin/Admin'
+import AddProduct from './pages/AddProduct/AddProduct'
 
 const App = () => {
   return (
@@ -34,6 +35,9 @@ const App = () => {
             </Route>
             <Route exact path='/admin'>
               <Admin />
+            </Route>
+            <Route exact path='/addproduct'>
+              <AddProduct />
             </Route>
           </Switch>
         </Router>

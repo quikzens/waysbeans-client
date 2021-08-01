@@ -2,7 +2,7 @@ import React from 'react'
 import './ImagePreview.css'
 
 const ImagePreview = () => {
-  return <div className='admin-addproduct-image'></div>
+  return <img src='' alt='' className='admin-addproduct-image' />
 }
 
 export default ImagePreview

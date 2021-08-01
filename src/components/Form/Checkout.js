@@ -162,6 +162,7 @@ const Checkout = () => {
             value={form.address}
             onChange={handleChange}
             placeholder='Max 250 karakter'
+            maxLength='250'
             required
           ></textarea>
         </div>
