@@ -5,9 +5,13 @@ import Loading from '../../../components/Loading/Loading'
 import './ListProduct.css'
 
 const ListProduct = () => {
-  const [products, setProducts] = useState(null)
+  // get products data
   const { data: dataProducts } = useGet('/products')
 
+  // init state
+  const [products, setProducts] = useState(null)
+
+  // init lifecycle
   useEffect(() => {
     setProducts(dataProducts)
     return () => {

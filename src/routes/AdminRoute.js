@@ -3,9 +3,13 @@ import { Redirect, Route } from 'react-router-dom'
 import { UserContext } from '../contexts/UserContext'
 
 function AdminRoute({ component: Component, ...rest }) {
+  // init context
   const { user } = useContext(UserContext)
+
+  // init state
   const [isLoading, setLoading] = useState(true)
 
+  // init lifecycle
   useEffect(() => {
     setLoading(false)
   }, [user])

@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const ProductItem = (props) => {
+  // init props
   const { _id, photo, name, price, stock } = props.product
 
   return (

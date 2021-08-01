@@ -7,6 +7,7 @@ export const UserContextProvider = ({ children }) => {
   // init state
   const [user, setUser] = useState({})
 
+  // init lifecycle
   useEffect(() => {
     // get user data from localStorage (if user is login)
     const userData = localStorage.getItem('user')

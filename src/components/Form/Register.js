@@ -3,7 +3,10 @@ import { UserContext } from '../../contexts/UserContext'
 import './Form.css'
 
 const Register = () => {
+  // init context
   const { register } = useContext(UserContext)
+
+  // init state
   const [form, setForm] = useState({
     fullname: '',
     email: '',

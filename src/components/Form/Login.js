@@ -3,7 +3,10 @@ import { UserContext } from '../../contexts/UserContext'
 import './Form.css'
 
 const Login = ({ isAdmin }) => {
+  // init context
   const { login } = useContext(UserContext)
+
+  // init state
   const [form, setForm] = useState({
     role: isAdmin ? 'admin' : 'user',
     email: '',

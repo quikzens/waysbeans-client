@@ -9,7 +9,10 @@ import {
 import { avatarPlaceholder } from '../../utils/images'
 
 const NavbarDropdown = () => {
+  // init context
   const { user, logout } = useContext(UserContext)
+
+  // init state
   const [isActive, setActive] = useState(false)
 
   return (

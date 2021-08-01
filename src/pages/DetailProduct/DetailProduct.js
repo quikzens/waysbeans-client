@@ -7,14 +7,14 @@ import Loading from '../../components/Loading/Loading'
 import './DetailProduct.css'
 
 const DetailProduct = () => {
+  // get product data
+  const { data: dataProduct } = useGet(`/product/${id}`)
+
   // init params
   const { id } = useParams()
 
   // init state
   const [product, setProduct] = useState(null)
-
-  // get product data
-  const { data: dataProduct } = useGet(`/product/${id}`)
 
   // init lifecycle
   useEffect(() => {

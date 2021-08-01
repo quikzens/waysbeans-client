@@ -3,6 +3,7 @@ import { close as closeIcon } from '../../utils/icons'
 import './Modal.css'
 
 const Modal = (props) => {
+  // init props
   const { show, close, title, children } = props
 
   return (

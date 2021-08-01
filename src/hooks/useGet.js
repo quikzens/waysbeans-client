@@ -2,13 +2,11 @@ import { useState, useEffect } from 'react'
 import { API } from '../config/api'
 
 export const useGet = (url) => {
+  // init state
   const [isInvoke, setInvoke] = useState(true)
   const [data, setData] = useState([])
 
-  const invoke = () => {
-    setInvoke(!isInvoke)
-  }
-
+  // init lifecycle
   useEffect(() => {
     const getData = async () => {
       const response = await API.get(url)
@@ -22,6 +20,10 @@ export const useGet = (url) => {
     }
     getData()
   }, [url, isInvoke])
+
+  const invoke = () => {
+    setInvoke(!isInvoke)
+  }
 
   return { data, invoke }
 }

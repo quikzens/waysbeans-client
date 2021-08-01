@@ -8,6 +8,7 @@ const PopUp = (props) => {
   // init state
   const [show, setShow] = useState(false)
 
+  // init lifecycle
   useEffect(() => {
     if (invoke) {
       setShow(true)

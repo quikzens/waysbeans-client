@@ -9,6 +9,7 @@ export const CartContextProvider = ({ children }) => {
   const [total, setTotal] = useState(0)
   const [totalQty, setTotalQty] = useState(0)
 
+  // lifecycle
   useEffect(() => {
     // get carts data, total, and totalQuantity from localStorage
     const cartsData = localStorage.getItem('carts')
