@@ -7,31 +7,27 @@ const CheckoutInfo = () => {
   // init context
   const { carts, total } = useContext(CartContext)
 
-  if (carts.length > 0) {
-    return (
-      <div className='checkout-info'>
-        {carts.map((cart, index) => (
-          <div className='checkout-info-item' key={index}>
-            <div className='checkout-info-subtotal flex jc-between'>
-              <p>Subtotal</p>
-              <p>{cart.subtotal}</p>
-            </div>
-            <div className='checkout-info-qty flex jc-between'>
-              <p>Qty</p>
-              <p>{cart.orderQuantity}</p>
-            </div>
+  return (
+    <div className='checkout-info'>
+      {carts.map((cart, index) => (
+        <div className='checkout-info-item' key={index}>
+          <div className='checkout-info-subtotal flex jc-between'>
+            <p>Subtotal</p>
+            <p>{cart.subtotal}</p>
           </div>
-        ))}
-        <div className='checkout-info-total flex jc-between'>
-          <p>Total</p>
-          <p>Rp. {total}</p>
+          <div className='checkout-info-qty flex jc-between'>
+            <p>Qty</p>
+            <p>{cart.orderQuantity}</p>
+          </div>
         </div>
-        <CheckoutBtn />
+      ))}
+      <div className='checkout-info-total flex jc-between'>
+        <p>Total</p>
+        <p>Rp. {total}</p>
       </div>
-    )
-  }
-
-  return null
+      <CheckoutBtn />
+    </div>
+  )
 }
 
 export default CheckoutInfo

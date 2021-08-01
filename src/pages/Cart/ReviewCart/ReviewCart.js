@@ -9,9 +9,6 @@ const ReviewCart = () => {
 
   return (
     <div className='review-cart'>
-      {carts.length === 0 && (
-        <p className='review-info'>Silahkan order kopi terlebih dahulu!</p>
-      )}
       {carts.map((cart, index) => (
         <div className='review-cart-item' key={index}>
           <div className='flex'>

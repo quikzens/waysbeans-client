@@ -2,6 +2,8 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { UserContextProvider } from './contexts/UserContext'
 import { CartContextProvider } from './contexts/CartContext'
+import UserRoute from './routes/UserRoute'
+import AdminRoute from './routes/AdminRoute'
 import Navbar from './components/Navbar/Navbar'
 import Home from './pages/Home/Home'
 import DetailProduct from './pages/DetailProduct/DetailProduct'
@@ -24,21 +26,13 @@ const App = () => {
             <Route exact path='/product/:id'>
               <DetailProduct />
             </Route>
-            <Route exact path='/carts'>
-              <Cart />
-            </Route>
-            <Route exact path='/checkout'>
-              <Checkout />
-            </Route>
-            <Route exact path='/profile'>
-              <Profile />
-            </Route>
+            <UserRoute exact path='/carts' component={Cart} />
+            <UserRoute exact path='/checkout' component={Checkout} />
+            <UserRoute exact path='/profile' component={Profile} />
             <Route exact path='/admin'>
               <Admin />
             </Route>
-            <Route exact path='/addproduct'>
-              <AddProduct />
-            </Route>
+            <AdminRoute exact path='/addproduct' component={AddProduct} />
           </Switch>
         </Router>
       </CartContextProvider>

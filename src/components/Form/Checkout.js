@@ -8,7 +8,7 @@ import './Form.css'
 
 const Checkout = () => {
   // init context
-  const { storeCarts, total } = useContext(CartContext)
+  const { storeCarts, total, totalQty } = useContext(CartContext)
 
   // init state
   const [form, setForm] = useState({
@@ -100,6 +100,10 @@ const Checkout = () => {
     return (
       <OnProcess msg='Tunggu sebentar ya saat kami memproses pesanan anda, jangan refresh halaman ini' />
     )
+  }
+
+  if (totalQty === 0) {
+    return <p className='checkout-info'>Silahkan order kopi terlebih dahulu!</p>
   }
 
   return (
