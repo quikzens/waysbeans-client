@@ -1,0 +1,11 @@
+.profile-info-img {
+  width: 180px;
+  height: 220px;
+  object-fit: cover;
+}
+
+.profile-info-fullname h4,
+.profile-info-email h4 {
+  font-weight: 600;
+  color: var(--brown-300);
+}

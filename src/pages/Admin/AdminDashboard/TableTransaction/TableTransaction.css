@@ -4,6 +4,11 @@ table {
   overflow-x: auto;
   text-align: left;
   width: 100%;
+  margin-top: 2rem;
+}
+
+thead {
+  background-color: var(--light-gray);
 }
 
 td,
@@ -12,19 +17,16 @@ th {
   padding: 1.2rem 1.5rem;
 }
 
-td:first-child,
-th:first-child {
-  padding-left: 0;
-}
-
-td:last-child,
-th:last-child {
-  padding-right: 0;
-}
-
 @media (min-width: 40rem) {
   table {
     display: table;
     overflow-x: initial;
   }
+}
+
+.payment-proof-icon {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: cover;
 }

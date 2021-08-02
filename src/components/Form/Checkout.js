@@ -27,7 +27,6 @@ const Checkout = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log(form)
 
     setProcess(true)
 
@@ -96,6 +95,9 @@ const Checkout = () => {
 
       reader.readAsDataURL(files[0])
     }
+
+    const previewText = document.querySelector('.form-item-image p')
+    previewText.textContent = files[0].name
   }
 
   if (onProcess) {
@@ -116,65 +118,65 @@ const Checkout = () => {
             <p>{error}</p>
           </div>
         )}
-        <div className='form-group'>
-          <label htmlFor='name'>Name</label>
+        <div className='form-item'>
           <input
             type='text'
             name='name'
             id='name'
             value={form.name}
             onChange={handleChange}
+            placeholder='Name'
             required
           />
         </div>
-        <div className='form-group'>
-          <label htmlFor='email'>Email</label>
+        <div className='form-item'>
           <input
             type='email'
             name='email'
             id='email'
             value={form.email}
             onChange={handleChange}
+            placeholder='Email'
             required
           />
         </div>
-        <div className='form-group'>
-          <label htmlFor='phone'>Phone</label>
+        <div className='form-item'>
           <input
             type='text'
             name='phone'
             id='phone'
             value={form.phone}
             onChange={handleChange}
+            placeholder='Phone'
             required
           />
         </div>
-        <div className='form-group'>
-          <label htmlFor='possCode'>Poss Code</label>
+        <div className='form-item'>
           <input
             type='text'
             name='possCode'
             id='possCode'
             value={form.possCode}
             onChange={handleChange}
+            placeholder='Poss Code'
             required
           />
         </div>
-        <div className='form-group'>
-          <label htmlFor='address'>Address</label>
+        <div className='form-item'>
           <textarea
             name='address'
             id='address'
             value={form.address}
             onChange={handleChange}
-            placeholder='Max 250 karakter'
+            placeholder='Address'
             maxLength='250'
+            rows='5'
             required
           ></textarea>
         </div>
-        <div className='form-group'>
-          <label htmlFor='attachment'>
-            Attache of Transaction <img src={pin} alt='' />
+        <div className='form-item'>
+          <label htmlFor='attachment' className='form-item-image'>
+            <p>Attache of Transaction</p> <img src={pin} alt='' />
           </label>
           <input
             type='file'
@@ -182,11 +184,12 @@ const Checkout = () => {
             id='attachment'
             accept='image/*'
             onChange={handleFile}
+            className='input-image'
             required
           />
         </div>
         <img src='' alt='' className='preview-attachment' />
-        <button className='form-submit' type='submit'>
+        <button className='form-submit btn w-100' type='submit'>
           Pay
         </button>
       </form>

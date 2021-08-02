@@ -19,7 +19,7 @@ const Profile = () => {
   // init lifecycle
   useEffect(() => {
     setProfile(profileData)
-    setTransactions(transactionsData)
+    setTransactions(transactionsData.reverse())
     return () => {
       setProfile(null)
       setTransactions(null)
@@ -28,8 +28,8 @@ const Profile = () => {
 
   if (profile && transactions) {
     return (
-      <div className='profile'>
-        <div className='flex'>
+      <div className='profile container'>
+        <div className='flex gap-2 jc-between'>
           <Info {...profile} />
           <ListTransaction transactions={transactions} />
         </div>

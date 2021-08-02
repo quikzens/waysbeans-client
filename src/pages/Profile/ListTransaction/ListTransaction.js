@@ -8,8 +8,9 @@ import './ListTransaction.css'
 const ListTransaction = ({ transactions }) => {
   return (
     <div className='list-transaction'>
+      <h2>My Transaction</h2>
       {transactions.map((transaction) => (
-        <React.Fragment key={transaction._id}>
+        <div key={transaction._id} className='flex flex-column gap-1 mb-1'>
           {transaction.products.map((product) => (
             <CartItem
               product={product.product}
@@ -18,12 +19,16 @@ const ListTransaction = ({ transactions }) => {
               key={product._id}
             >
               <img src={qrCode} alt='' className='transaction-qrcode' />
-              <div className='transaction-status'>
+              <div
+                className={`transaction-status ${transaction.status
+                  .replace(' ', '-')
+                  .toLowerCase()}`}
+              >
                 <p>{transaction.status}</p>
               </div>
             </CartItem>
           ))}
-        </React.Fragment>
+        </div>
       ))}
     </div>
   )

@@ -1,0 +1,11 @@
+.admin-dashboard {
+  width: 100%;
+  max-width: 1200px;
+  margin: 5rem auto 0 auto;
+  padding: 0 1rem 5rem 1rem;
+}
+
+.admin-dashboard h2 {
+  font-size: 24px;
+  color: var(--brown-400);
+}

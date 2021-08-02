@@ -1,0 +1,12 @@
+.admin-login {
+  width: 100%;
+  max-width: 300px;
+  margin: 5rem auto 0 auto;
+  padding-bottom: 5rem;
+}
+
+.admin-login h2 {
+  font-size: 36px;
+  color: var(--brown-400);
+  font-weight: 700;
+}

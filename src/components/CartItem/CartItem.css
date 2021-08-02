@@ -1,0 +1,23 @@
+.cart-item {
+  min-width: 500px;
+  padding: 1rem 2rem;
+  background-color: var(--brown-100);
+  color: var(--brown-300);
+  font-size: 14px;
+}
+
+.cart-item-photo {
+  width: 80px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.cart-item-name {
+  padding-top: 0.5rem;
+  font-size: 16px;
+}
+
+.cart-item-subtotal {
+  font-weight: 700;
+  padding-bottom: 0.5rem;
+}

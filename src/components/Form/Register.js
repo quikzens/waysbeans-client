@@ -37,40 +37,40 @@ const Register = () => {
           <p>{error}</p>
         </div>
       )}
-      <div className='form-group'>
-        <label htmlFor='email'>Email</label>
+      <div className='form-item'>
         <input
           type='email'
           name='email'
           id='email'
           value={form.email}
           onChange={handleChange}
+          placeholder='Email'
           required
         />
       </div>
-      <div className='form-group'>
-        <label htmlFor='password'>Password</label>
+      <div className='form-item'>
         <input
           type='password'
           name='password'
           id='password'
           value={form.password}
           onChange={handleChange}
+          placeholder='Password'
           required
         />
       </div>
-      <div className='form-group'>
-        <label htmlFor='fullname'>Fullname</label>
+      <div className='form-item'>
         <input
           type='text'
           name='fullname'
           id='fullname'
           value={form.fullname}
           onChange={handleChange}
+          placeholder='Fullname'
           required
         />
       </div>
-      <button className='form-submit' type='submit'>
+      <button className='form-submit btn w-100' type='submit'>
         Register
       </button>
     </form>

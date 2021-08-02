@@ -1,0 +1,10 @@
+.admin-addproduct {
+  margin-top: 5rem;
+  padding-bottom: 5rem;
+  gap: 10rem;
+}
+
+.admin-addproduct h2 {
+  font-size: 24px;
+  color: var(--brown-400);
+}

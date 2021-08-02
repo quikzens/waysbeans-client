@@ -7,9 +7,9 @@ import './Checkout.css'
 
 const Checkout = () => {
   return (
-    <div className='checkout'>
-      <div className='flex'>
-        <div>
+    <div className='checkout container'>
+      <div className='flex gap-3'>
+        <div className='grow-1'>
           <h2>Shipping</h2>
           <CheckoutForm />
         </div>

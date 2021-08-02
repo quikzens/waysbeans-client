@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom'
 const CheckoutBtn = () => {
   return (
     <button className='checkout-btn btn'>
-      <Link to='/checkout'>Proceed to Checkout</Link>
+      <Link to='/checkout' className='d-block'>
+        Proceed to Checkout
+      </Link>
     </button>
   )
 }

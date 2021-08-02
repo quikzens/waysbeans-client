@@ -1,4 +1,5 @@
 import React from 'react'
+import formatPrice from '../../../../utils/formatPrice'
 
 import ActionTransaction from '../ActionTransaction/ActionTransaction'
 
@@ -62,7 +63,7 @@ const TableTransaction = ({ transactions, refetchTransactions }) => {
                 </a>
               </td>
               <td className={statusColor}>{transaction.status}</td>
-              <td>Rp. {transaction.total}</td>
+              <td>Rp. {transaction.total && formatPrice(transaction.total)}</td>
               <td>
                 <ActionTransaction
                   id={transaction._id}

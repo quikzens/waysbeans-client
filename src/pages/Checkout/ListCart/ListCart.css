@@ -1,0 +1,11 @@
+.list-cart {
+  min-width: 500px;
+}
+
+.list-cart-total {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--brown-100);
+  color: var(--brown-400);
+  font-weight: 700;
+}

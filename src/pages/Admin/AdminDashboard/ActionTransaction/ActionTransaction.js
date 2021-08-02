@@ -39,13 +39,13 @@ const ActionTransaction = (props) => {
       {status === 'Waiting Approve' && (
         <>
           <button
-            className='admin-dashboard-cancel d-block'
+            className='admin-dashboard-cancel btn w-100 d-block'
             onClick={() => cancelTransaction(id)}
           >
             Cancel
           </button>
           <button
-            className='admin-dashboard-approve d-block'
+            className='admin-dashboard-approve btn w-100 d-block'
             onClick={() => approveTransaction(id)}
           >
             Approve

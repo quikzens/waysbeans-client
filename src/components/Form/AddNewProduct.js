@@ -82,6 +82,9 @@ const AddNewProduct = () => {
 
       reader.readAsDataURL(files[0])
     }
+
+    const previewText = document.querySelector('.form-item-image p')
+    previewText.textContent = files[0].name
   }
 
   if (onProcess) {
@@ -98,66 +101,66 @@ const AddNewProduct = () => {
             <p>{error}</p>
           </div>
         )}
-        <div className='form-group'>
-          <label htmlFor='name'>Name</label>
+        <div className='form-item'>
           <input
             type='text'
             name='name'
             id='name'
             value={form.name}
             onChange={handleChange}
+            placeholder='Name'
             required
           />
         </div>
-        <div className='form-group'>
-          <label htmlFor='stock'>Stock</label>
+        <div className='form-item'>
           <input
             type='number'
             name='stock'
             id='stock'
             value={form.stock}
             onChange={handleChange}
+            placeholder='Stock'
             required
           />
         </div>
-        <div className='form-group'>
-          <label htmlFor='price'>Price</label>
+        <div className='form-item'>
           <input
             type='number'
             name='price'
             id='price'
             value={form.price}
             onChange={handleChange}
+            placeholder='Price'
             required
           />
         </div>
-        <div className='form-group'>
-          <label htmlFor='description'>Address</label>
+        <div className='form-item'>
           <textarea
             name='description'
             id='description'
             value={form.description}
             onChange={handleChange}
-            placeholder='Max 250 karakter'
+            placeholder='Description'
             maxLength='250'
             required
           ></textarea>
         </div>
-        <div className='form-group'>
-          <label htmlFor='photo'>
-            Photo Product <img src={pin} alt='' />
+        <div className='form-item'>
+          <label htmlFor='photo' className='form-item-image'>
+            <p>Photo Product</p> <img src={pin} alt='' />
           </label>
           <input
             type='file'
             name='photo'
             id='photo'
             accept='image/*'
+            className='input-image'
             onChange={handleFile}
             required
           />
         </div>
 
-        <button className='form-submit' type='submit'>
+        <button className='form-submit btn w-100' type='submit'>
           Add Product
         </button>
       </form>

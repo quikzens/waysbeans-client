@@ -1,0 +1,16 @@
+.admin-dashboard-action {
+  font-size: 14px;
+}
+
+.admin-dashboard-approve,
+.admin-dashboard-cancel {
+  padding: 0.3rem;
+}
+
+.admin-dashboard-cancel {
+  background-color: var(--red);
+}
+
+.admin-dashboard-approve {
+  background-color: var(--green);
+}

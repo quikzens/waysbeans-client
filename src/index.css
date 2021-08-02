@@ -215,14 +215,17 @@ th:not([align]) {
   --light-gray: rgba(245, 245, 245, 1);
   --black: #212121;
   --brown-25: rgba(97, 61, 43, 0.25);
-  --brown-50: rgba(97, 61, 43, 0.5);
+  --brown-80: rgba(97, 61, 43, 0.8);
   --brown-100: rgba(246, 230, 218, 1);
   --brown-200: rgba(219, 182, 153, 1);
   --brown-300: rgba(151, 74, 74, 1);
   --brown-400: rgba(97, 61, 43, 1);
   --red: rgba(255, 7, 66, 1);
+  --red-10: rgba(255, 7, 66, 0.1);
   --green: rgba(10, 207, 131, 1);
+  --green-10: rgba(10, 207, 131, 0.1);
   --orange: rgba(255, 153, 0, 1);
+  --orange-10: rgba(255, 153, 0, 0.1);
   --blue: rgba(93, 197, 182, 1);
 }
 
@@ -247,6 +250,25 @@ button {
 
 a {
   color: inherit;
+}
+
+a:focus {
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+  margin: 0;
 }
 
 /* Utilities */
@@ -321,6 +343,19 @@ a {
 
 .w-100 {
   width: 100%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.px-1 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
 }
 
 .btn {

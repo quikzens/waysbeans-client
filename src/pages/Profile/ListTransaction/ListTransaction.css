@@ -1,0 +1,22 @@
+.transaction-status {
+  text-align: center;
+  padding: 0.2rem 1rem;
+  width: 110px;
+  line-height: 0.9;
+  background-color: white;
+}
+
+.transaction-status.waiting-approve {
+  color: var(--orange);
+  background-color: var(--orange-10);
+}
+
+.transaction-status.approved {
+  color: var(--green);
+  background-color: var(--green-10);
+}
+
+.transaction-status.canceled {
+  color: var(--red);
+  background-color: var(--red-10);
+}

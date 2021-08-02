@@ -18,23 +18,18 @@
 
 .modal-content {
   position: relative;
+  width: 100%;
+  max-width: 300px;
   background-color: white;
-  padding: 50px 33px;
+  padding: 2rem 1.5rem;
   border-radius: 10px;
 }
 
 .modal-heading {
-  color: #212121;
   font-size: 36px;
-  font-weight: 900;
+  font-weight: 700;
+  color: var(--brown-400);
 }
-
-/* .modal__form {
-  display: flex;
-  flex-direction: column;
-  gap: 35px;
-  margin-top: 50px;
-} */
 
 .modal-close {
   width: 35px;
@@ -47,6 +42,7 @@
   border: 0;
   transition: 0.2s;
   cursor: pointer;
+  opacity: 0.3;
 }
 
 .modal-close:hover {

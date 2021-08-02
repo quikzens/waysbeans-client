@@ -7,12 +7,14 @@ import './AddProduct.css'
 
 const AddProduct = () => {
   return (
-    <div className='admin-addproduct flex'>
-      <div>
+    <div className='admin-addproduct container flex'>
+      <div className='grow-1'>
         <h2>Add Product</h2>
         <AddNewProduct />
       </div>
-      <ImagePreview />
+      <div>
+        <ImagePreview />
+      </div>
     </div>
   )
 }
