@@ -29,7 +29,7 @@ const DetailProduct = () => {
   if (!product) return <Loading />
 
   return (
-    <div className='detail-product flex'>
+    <div className='detail-product flex container gap-3'>
       <Image image={product.photo} name={product.name} />
       <Detail product={product} />
     </div>

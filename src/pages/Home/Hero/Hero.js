@@ -5,7 +5,7 @@ import './Hero.css'
 
 const Hero = () => {
   return (
-    <div className='home-hero'>
+    <div className='home-hero container'>
       <img className='home-hero-logo' src={heroLogo} alt='WaysBeans' />
       <h1 className='home-hero-heading'>best quality coffee beans</h1>
       <p className='home-hero-lead'>

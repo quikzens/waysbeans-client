@@ -8,6 +8,8 @@ import logout from '../assets/images/icons/logout.svg'
 import pin from '../assets/images/icons/pin.svg'
 import trash from '../assets/images/icons/trash.svg'
 import user from '../assets/images/icons/user.svg'
+import plus from '../assets/images/icons/plus.svg'
+import minus from '../assets/images/icons/minus.svg'
 
 export {
   approve,
@@ -20,4 +22,6 @@ export {
   pin,
   trash,
   user,
+  plus,
+  minus,
 }

@@ -21,7 +21,7 @@ const Navbar = () => {
   const [isLoginShow, setLogin] = useState(false)
 
   return (
-    <div className='navbar'>
+    <div className='navbar flex jc-between ai-center'>
       <Link to='/'>
         <img className='navbar-logo' src={logo} alt='' />
       </Link>
@@ -53,10 +53,10 @@ const Navbar = () => {
         show cart button and dropdown
       */}
       {user.token && (
-        <>
+        <div className='flex ai-center gap-2'>
           {user.role === 'user' && <NavbarCart />}
           <NavbarDropdown />
-        </>
+        </div>
       )}
     </div>
   )

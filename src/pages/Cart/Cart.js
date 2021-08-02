@@ -11,7 +11,7 @@ const Cart = () => {
   const { carts } = useContext(CartContext)
 
   return (
-    <div className='cart'>
+    <div className='cart container'>
       <h2>My Cart</h2>
       {carts.length === 0 ? (
         <p className='review-info'>
@@ -20,7 +20,7 @@ const Cart = () => {
       ) : (
         <>
           <p>Review Your Order</p>
-          <div className='flex'>
+          <div className='flex gap-2'>
             <ReviewCart />
             <CheckoutInfo />
           </div>

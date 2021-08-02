@@ -1,0 +1,4 @@
+.detail-product-image {
+  min-width: 400px;
+  object-fit: cover;
+}

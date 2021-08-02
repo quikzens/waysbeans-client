@@ -1,3 +1,27 @@
+.navbar {
+  padding: 0.75rem 4rem;
+  background-color: var(--light-gray);
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* Navbar Button */
+.navbar-btn-item {
+  font-weight: 600;
+  padding: 0.5rem;
+  width: 120px;
+  text-align: center;
+  background-color: transparent;
+  border: 2px solid var(--brown-400);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navbar-btn-item.primary {
+  background-color: var(--brown-400);
+  color: white;
+}
+
+/* Navbar Dropdown */
 .navbar-dropdown {
   position: relative;
   display: flex;
@@ -10,21 +34,21 @@
   width: 50px;
   height: 50px;
   cursor: pointer;
-  margin-right: 2.75rem;
+  margin-right: 1rem;
   border-radius: 50%;
   overflow: hidden;
 }
 
 .navbar-dropdown-dropdown {
   position: absolute;
-  min-width: 250px;
+  min-width: 200px;
   top: 5.2rem;
-  padding: 30px;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 25px;
-  box-shadow: -15px -15px 35px rgba(0, 0, 0, 0.1),
-    4px 4px 25px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.25),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   background-color: white;
   transform: translateY(-400px);
@@ -41,31 +65,49 @@
 .navbar-dropdown-dropdown::before {
   content: '';
   position: absolute;
-  right: 10px;
+  right: 25px;
   top: -21px;
-  border-right: 58px solid transparent;
-  border-left: 58px solid transparent;
-  border-bottom: 58px solid white;
+  border-right: 17px solid transparent;
+  border-left: 17px solid transparent;
+  border-bottom: 30px solid white;
 }
 
 .navbar-dropdown-dropdown hr {
   display: block;
-  margin: 0 -30px 0 -30px;
+  margin: 0 -1.5rem 0 -1.5rem;
   border: 0;
-  border-bottom: 2px solid rgba(168, 168, 168, 1);
+  border-bottom: 1px solid rgba(168, 168, 168, 0.7);
 }
 
 .navbar-dropdown-item {
   display: flex;
   align-items: center;
   text-decoration: none;
-  gap: 13px;
-  font-size: 18px;
-  font-weight: 400;
-  color: #212121;
+  gap: 10px;
+  font-size: 17px;
+  font-weight: 500;
   cursor: pointer;
 }
 
 .navbar-dropdown-item img {
-  width: 30px;
+  width: 28px;
+}
+
+/* Navbar Cart */
+.navbar-cart {
+  position: relative;
+}
+
+.navbar-cart-number {
+  position: absolute;
+  padding-top: 1px;
+  top: 5px;
+  right: 0;
+  width: 17px;
+  height: 17px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  background-color: var(--red);
+  border-radius: 50%;
 }

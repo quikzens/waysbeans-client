@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { UserContext } from '../../../contexts/UserContext'
+import formatPrice from '../../../utils/formatPrice'
 
 import AddToCartBtn from './AddToCartBtn'
 
@@ -17,7 +18,7 @@ const Detail = (props) => {
       <h1 className='detail-product-name'>{name}</h1>
       <p className='detail-product-stock'>Stock: {stock}</p>
       <p className='detail-product-description'>{description}</p>
-      <p className='detail-product-price'>Rp. {price}</p>
+      <p className='detail-product-price'>Rp. {price && formatPrice(price)}</p>
       {user.role === 'user' ? (
         <AddToCartBtn productId={_id} price={price} product={props.product} />
       ) : (

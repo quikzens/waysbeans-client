@@ -78,7 +78,7 @@ export const CartContextProvider = ({ children }) => {
           return {
             ...cart,
             orderQuantity: cart.orderQuantity + 1,
-            subtotal: cart.subtotal + price,
+            subtotal: cart.subtotal + parseInt(price),
           }
         }
 

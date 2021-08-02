@@ -1,0 +1,24 @@
+.checkout-info {
+  min-width: 300px;
+  font-size: 15px;
+}
+
+.checkout-btn {
+  min-width: 240px;
+  margin-left: auto;
+}
+
+.checkout-info-item,
+.checkout-info-total {
+  border-top: 1px solid rgba(168, 168, 168, 0.7);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.checkout-info-item {
+  gap: 0.5rem;
+}
+
+.checkout-info-total {
+  font-weight: 700;
+}

@@ -5,11 +5,14 @@ const NavbarButton = (props) => {
   const { setRegister, setLogin } = props
 
   return (
-    <div className='navbar-btn'>
+    <div className='navbar-btn flex gap-1'>
       <button className='navbar-btn-item' onClick={() => setLogin(true)}>
         Login
       </button>
-      <button className='navbar-btn-item' onClick={() => setRegister(true)}>
+      <button
+        className='navbar-btn-item primary'
+        onClick={() => setRegister(true)}
+      >
         Register
       </button>
     </div>

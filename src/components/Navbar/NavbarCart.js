@@ -13,7 +13,13 @@ const NavbarCart = () => {
       <button className='navbar-cart-btn'>
         <Link to='/carts'>
           <img src={cart} alt='cart' className='navbar-cart-icon' />
-          <span className='navbar-cart-number'>{totalQty}</span>
+          <span
+            className={`navbar-cart-number ${
+              totalQty === 0 ? 'd-none' : 'flex jc-center ai-center'
+            }`}
+          >
+            {totalQty}
+          </span>
         </Link>
       </button>
     </div>

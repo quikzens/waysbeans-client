@@ -14,7 +14,7 @@ const AddToCartBtn = (props) => {
 
   return (
     <button
-      className='detail-product-cta'
+      className='detail-product-cta btn w-100'
       onClick={() => handleClick(productId, price, product)}
     >
       Add to Cart

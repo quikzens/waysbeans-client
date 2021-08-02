@@ -1,0 +1,28 @@
+.review-cart {
+  flex-grow: 1;
+  font-size: 15px;
+}
+
+.review-cart-item {
+  border-top: 1px solid rgba(168, 168, 168, 0.7);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.review-cart-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.review-cart-subtract,
+.review-cart-add {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.review-cart-qty {
+  padding: 0 0.7rem;
+  border-radius: 3px;
+  background-color: var(--brown-100);
+}

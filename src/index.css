@@ -3,6 +3,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  user-select: none;
+  transition: 0.2s ease;
 }
 
 :root {
@@ -211,7 +213,7 @@ th:not([align]) {
 /* Variables */
 :root {
   --light-gray: rgba(245, 245, 245, 1);
-  --black: rgb(44, 44, 44);
+  --black: #212121;
   --brown-25: rgba(97, 61, 43, 0.25);
   --brown-50: rgba(97, 61, 43, 0.5);
   --brown-100: rgba(246, 230, 218, 1);
@@ -229,19 +231,76 @@ body {
   position: relative;
   font-family: 'Public Sans', sans-serif;
   color: var(--black);
+  line-height: 1.4;
 }
 
 img {
   display: block;
 }
 
+button {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
 /* Utilities */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 .flex {
   display: flex;
 }
 
 .flex-column {
   flex-direction: column;
+}
+
+.jc-between {
+  justify-content: space-between;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.grow-1 {
+  flex-grow: 1;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+.ai-end {
+  align-items: flex-end;
+}
+
+.gap-05 {
+  gap: 0.5rem;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+.gap-3 {
+  gap: 3rem;
+}
+
+.d-none {
+  display: none;
 }
 
 .d-block {
@@ -258,4 +317,24 @@ img {
 
 .clr-red {
   color: var(--red);
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.btn {
+  display: block;
+  font-weight: 600;
+  color: white;
+  background-color: var(--brown-400);
+  border-radius: 5px;
+  cursor: pointer;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  text-align: center;
+}
+
+.btn a {
+  text-decoration: none;
 }

@@ -1,0 +1,11 @@
+.cart {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  color: var(--brown-300);
+}
+
+.cart h2 {
+  font-size: 24px;
+  margin-bottom: 2rem;
+  color: var(--brown-400);
+}

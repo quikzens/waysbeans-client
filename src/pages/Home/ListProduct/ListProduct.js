@@ -24,7 +24,7 @@ const ListProduct = () => {
   if (!products) return <Loading />
 
   return (
-    <div className='home-list-product'>
+    <div className='home-list-product container'>
       {products.map((product) => (
         <ProductItem product={product} key={product._id} />
       ))}
