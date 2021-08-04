@@ -10,7 +10,7 @@ import './Form.css'
 
 const Checkout = () => {
   // init context
-  const { storeCarts, total, totalQty } = useContext(CartContext)
+  const { storeCarts, cleanCarts, total, totalQty } = useContext(CartContext)
 
   // init state
   const [form, setForm] = useState({
@@ -57,12 +57,14 @@ const Checkout = () => {
 
     // if transaction and cart added successfully
     // show popup
-    // redirect to profile page
     setProcess(false)
     setSuccess(true)
     setTimeout(() => {
       setSuccess(false)
+      cleanCarts() // clean up state and localStorage
     }, 3000)
+
+    // redirect to profile page
     setTimeout(() => {
       window.location.href = '/profile'
     }, 5000)

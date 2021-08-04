@@ -9,7 +9,7 @@ export const CartContextProvider = ({ children }) => {
   const [total, setTotal] = useState(0)
   const [totalQty, setTotalQty] = useState(0)
 
-  // lifecycle
+  // init lifecycle
   useEffect(() => {
     // get carts data, total, and totalQuantity from localStorage
     const cartsData = localStorage.getItem('carts')
@@ -160,8 +160,10 @@ export const CartContextProvider = ({ children }) => {
         }
       }
     })
+  }
 
-    // after carts stored to DB, clean up state and localStorage
+  // clean carts
+  const cleanCarts = () => {
     setCarts([])
     setTotal(0)
     setTotalQty(0)
@@ -180,6 +182,7 @@ export const CartContextProvider = ({ children }) => {
         subtractCart,
         deleteCart,
         storeCarts,
+        cleanCarts,
       }}
     >
       {children}

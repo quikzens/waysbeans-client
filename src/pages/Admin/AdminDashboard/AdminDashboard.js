@@ -16,7 +16,7 @@ const AdminDashboard = () => {
 
   // init lifecycle
   useEffect(() => {
-    setTransactions(transactionsData.reverse())
+    setTransactions(transactionsData)
     return () => {
       setTransactions(null)
     }
