@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import { CartContext } from '../../contexts/CartContext'
 
 import ReviewCart from './ReviewCart/ReviewCart'
@@ -14,8 +15,12 @@ const Cart = () => {
     <div className='cart container'>
       <h2>My Cart</h2>
       {carts.length === 0 ? (
-        <p className='review-info'>
-          Tampaknya kamu belum memesan, silahkan order kopi terlebih dahulu!
+        <p className='alert alert-info'>
+          Tampaknya kamu belum memesan, silahkan{' '}
+          <Link to='/' className='alert-link'>
+            order kopi
+          </Link>{' '}
+          terlebih dahulu!
         </p>
       ) : (
         <>

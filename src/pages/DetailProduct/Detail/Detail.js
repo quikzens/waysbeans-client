@@ -24,7 +24,7 @@ const Detail = (props) => {
       ) : (
         <>
           {user.role !== 'admin' && (
-            <div className='detail-product-info'>
+            <div className='alert alert-info'>
               Hei, kamu harus login dulu sebelum order!
             </div>
           )}

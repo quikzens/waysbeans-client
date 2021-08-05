@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react'
+import { Link } from 'react-router-dom'
 import { API, configFormData } from '../../config/api'
 import { CartContext } from '../../contexts/CartContext'
 
@@ -109,7 +110,15 @@ const Checkout = () => {
   }
 
   if (totalQty === 0) {
-    return <p className='checkout-info'>Silahkan order kopi terlebih dahulu!</p>
+    return (
+      <p className='alert alert-info'>
+        Silahkan{' '}
+        <Link to='/' className='alert-link'>
+          order kopi
+        </Link>{' '}
+        terlebih dahulu!
+      </p>
+    )
   }
 
   return (
