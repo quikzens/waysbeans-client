@@ -22,7 +22,6 @@ const AddNewProduct = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log(form)
 
     setProcess(true)
 
@@ -90,7 +89,7 @@ const AddNewProduct = () => {
 
   if (onProcess) {
     return (
-      <OnProcess msg='Tunggu sebentar saat kami menambahkan produk, jangan refresh halaman ini ya!' />
+      <OnProcess msg='Kami sedang menambahkan produk, jangan refresh halaman ini ya!' />
     )
   }
 

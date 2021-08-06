@@ -108,7 +108,7 @@ const Checkout = () => {
 
   if (onProcess) {
     return (
-      <OnProcess msg='Tunggu sebentar ya saat kami memproses pesanan anda, jangan refresh halaman ini' />
+      <OnProcess msg='Kami sedang memproses pesanan anda, jangan refresh halaman ini ya!' />
     )
   }
 
