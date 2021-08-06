@@ -44,7 +44,6 @@ export const UserContextProvider = ({ children }) => {
     }
 
     const userData = response.data.data
-    console.log(userData)
     if (userData) userIn(userData)
   }
 

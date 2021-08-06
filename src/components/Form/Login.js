@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { UserContext } from '../../contexts/UserContext'
 
 import './Form.css'
@@ -15,8 +15,15 @@ const Login = ({ isAdmin }) => {
   })
   const [error, setError] = useState(null)
 
+  // init lifecycle
+  useEffect(() => {
+    return () => {
+      setForm(null)
+      setError(null)
+    }
+  }, [])
+
   const handleSubmit = async (e) => {
-    console.log(form)
     e.preventDefault()
     const msg = await login(form)
     if (msg?.error) setError(msg.error)
@@ -34,7 +41,7 @@ const Login = ({ isAdmin }) => {
   return (
     <form className='form' onSubmit={handleSubmit}>
       {error && (
-        <div className='form-alert'>
+        <div className='form-alert alert alert-danger'>
           <p>{error}</p>
         </div>
       )}

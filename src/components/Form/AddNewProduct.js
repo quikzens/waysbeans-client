@@ -39,7 +39,8 @@ const AddNewProduct = () => {
     if (response.data.status === 'failed') {
       // if failed, abort this function
       // and set the error message
-      return setError(response.data.message)
+      setError(response.data.message)
+      return setProcess(false)
     }
 
     // if product added successfully
@@ -97,7 +98,7 @@ const AddNewProduct = () => {
     <>
       <form className='form form-addproduct' onSubmit={handleSubmit}>
         {error && (
-          <div className='form-alert'>
+          <div className='form-alert alert alert-danger'>
             <p>{error}</p>
           </div>
         )}
