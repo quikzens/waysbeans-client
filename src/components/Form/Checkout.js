@@ -46,7 +46,8 @@ const Checkout = () => {
     if (response.data.status === 'failed') {
       // if failed, abort this function
       // and set the error message
-      return setError(response.data.message)
+      setError(response.data.message)
+      return setProcess(false)
     }
 
     // if success, get the transaction data we successfully added before
@@ -57,6 +58,8 @@ const Checkout = () => {
     if (msg?.error) console.log(msg.error)
 
     // if transaction and cart added successfully
+    // clean previous error (if exist)
+    setError('')
     // show popup
     setProcess(false)
     setSuccess(true)
@@ -125,7 +128,7 @@ const Checkout = () => {
     <>
       <form className='form form-checkout' onSubmit={handleSubmit}>
         {error && (
-          <div className='form-alert'>
+          <div className='form-alert alert alert-danger'>
             <p>{error}</p>
           </div>
         )}

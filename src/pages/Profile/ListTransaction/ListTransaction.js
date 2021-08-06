@@ -16,6 +16,7 @@ const ListTransaction = ({ transactions }) => {
               product={product.product}
               orderQuantity={product.orderQuantity}
               subtotal={product.product.price * product.orderQuantity}
+              createdAt={product._createdAt}
               key={product._id}
             >
               <img src={qrCode} alt='' className='transaction-qrcode' />

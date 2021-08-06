@@ -1,4 +1,5 @@
 import React from 'react'
+import displayDate from '../../utils/displayDate'
 import formatPrice from '../../utils/formatPrice'
 
 import { logoSmall } from '../../utils/images'
@@ -6,7 +7,7 @@ import './CartItem.css'
 
 const CartItem = (props) => {
   // init props
-  const { product, orderQuantity, subtotal, children } = props
+  const { product, orderQuantity, subtotal, children, createdAt } = props
 
   return (
     <div className='cart-item'>
@@ -14,7 +15,12 @@ const CartItem = (props) => {
         <img src={product.photo} alt='' className='cart-item-photo' />
         <div className='flex grow-1 jc-between'>
           <div className='flex flex-column jc-between px-1'>
-            <h4 className='cart-item-name'>{product.name}</h4>
+            <div>
+              <h4 className='cart-item-name'>{product.name}</h4>
+              {(createdAt &&
+                displayDate(new Date(createdAt.toString().slice(0, 10)))) ||
+                displayDate(new Date())}
+            </div>
             <div>
               <p>Price: {product.price && formatPrice(product.price)}</p>
               <p>Qty: {orderQuantity}</p>
