@@ -52,7 +52,9 @@ const ActionTransaction = (props) => {
           </button>
         </>
       )}
-      {status === 'Approved' && <img src={approve} alt='' />}
+      {(status === 'Success' || status === 'On The Way') && (
+        <img src={approve} alt='' />
+      )}
       {status === 'Canceled' && <img src={cancel} alt='' />}
     </span>
   )

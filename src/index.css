@@ -226,7 +226,7 @@ th:not([align]) {
   --green-10: rgba(10, 207, 131, 0.1);
   --orange: rgba(255, 153, 0, 1);
   --orange-10: rgba(255, 153, 0, 0.1);
-  --blue: rgba(93, 197, 182, 1);
+  --blue: rgb(62, 93, 196);
 }
 
 /* Global */
@@ -339,6 +339,10 @@ input[type='number'] {
 
 .clr-red {
   color: var(--red);
+}
+
+.clr-blue {
+  color: var(--blue);
 }
 
 .w-100 {

@@ -1,4 +1,5 @@
-.transaction-status {
+.transaction-status,
+.transaction-btn {
   text-align: center;
   padding: 0.2rem 1rem;
   width: 110px;
@@ -11,7 +12,7 @@
   background-color: var(--orange-10);
 }
 
-.transaction-status.approved {
+.transaction-status.success {
   color: var(--green);
   background-color: var(--green-10);
 }
@@ -19,4 +20,12 @@
 .transaction-status.canceled {
   color: var(--red);
   background-color: var(--red-10);
+}
+
+.transaction-btn {
+  font-weight: 600;
+  color: white;
+  padding: 0.3rem 1rem;
+  border-radius: 3px;
+  background-color: var(--brown-400);
 }

@@ -1,11 +1,15 @@
 import React from 'react'
 
 import CartItem from '../../../components/CartItem/CartItem'
+import CompletedBtn from './CompletedBtn'
 
 import { qrCode } from '../../../utils/images'
 import './ListTransaction.css'
 
-const ListTransaction = ({ transactions }) => {
+const ListTransaction = (props) => {
+  // init props
+  const { transactions, refetchTransactions } = props
+
   return (
     <div className='list-transaction'>
       <h2>My Transaction</h2>
@@ -20,13 +24,20 @@ const ListTransaction = ({ transactions }) => {
               key={product._id}
             >
               <img src={qrCode} alt='' className='transaction-qrcode' />
-              <div
-                className={`transaction-status ${transaction.status
-                  .replace(' ', '-')
-                  .toLowerCase()}`}
-              >
-                <p>{transaction.status}</p>
-              </div>
+              {transaction.status === 'On The Way' ? (
+                <CompletedBtn
+                  id={transaction._id}
+                  refetchTransactions={refetchTransactions}
+                />
+              ) : (
+                <div
+                  className={`transaction-status ${transaction.status
+                    .replace(' ', '-')
+                    .toLowerCase()}`}
+                >
+                  <p>{transaction.status}</p>
+                </div>
+              )}
             </CartItem>
           ))}
         </div>

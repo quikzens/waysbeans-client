@@ -29,7 +29,10 @@ const TableTransaction = ({ transactions, refetchTransactions }) => {
             case 'Waiting Approve':
               statusColor = 'clr-orange'
               break
-            case 'Approved':
+            case 'On The Way':
+              statusColor = 'clr-blue'
+              break
+            case 'Success':
               statusColor = 'clr-green'
               break
             case 'Canceled':

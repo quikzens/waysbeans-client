@@ -10,7 +10,7 @@ import './Profile.css'
 const Profile = () => {
   // get user profile and transaction data
   const { data: profileData } = useGet('/my-profile')
-  const { data: transactionsData } = useGet('/my-transactions')
+  const { data: transactionsData, invoke } = useGet('/my-transactions')
 
   // init state
   const [profile, setProfile] = useState(null)
@@ -31,7 +31,10 @@ const Profile = () => {
       <div className='profile container'>
         <div className='flex gap-2 jc-between'>
           <Info {...profile} />
-          <ListTransaction transactions={transactions} />
+          <ListTransaction
+            transactions={transactions}
+            refetchTransactions={invoke}
+          />
         </div>
       </div>
     )
