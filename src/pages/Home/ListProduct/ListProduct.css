@@ -1,3 +1,21 @@
+.home-filter-product {
+  margin-top: 3rem;
+}
+
+.home-filter-product h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.home-filter-product input {
+  margin: 0;
+}
+
+.home-filter-product .btn {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .home-list-product {
   display: grid;
   margin-top: 4rem;
