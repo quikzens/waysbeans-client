@@ -12,7 +12,6 @@ const ListProduct = () => {
 
   // init state
   const [products, setProducts] = useState(null)
-  const [isFilterActive, setFilterActive] = useState(false)
 
   // init lifecycle
   useEffect(() => {
@@ -32,11 +31,8 @@ const ListProduct = () => {
           <div className='form-item'>
             <input type='text' placeholder='max price' />
           </div>
-          {isFilterActive ? (
-            <button className='btn'>Clean Filter</button>
-          ) : (
-            <button className='btn'>Filter</button>
-          )}
+          <button className='btn'>Filter</button>
+          <button className='btn'>Clean Filter</button>
         </div>
       </div>
       <div className='home-list-product container'>
