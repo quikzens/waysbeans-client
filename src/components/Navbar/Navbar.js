@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { UserContext } from '../../contexts/UserContext'
 
 import NavbarButton from './NavbarButton'
@@ -20,6 +20,9 @@ const Navbar = () => {
   const [isRegisterShow, setRegister] = useState(false)
   const [isLoginShow, setLogin] = useState(false)
 
+  // get url
+  const location = useLocation().pathname
+
   return (
     <div className='navbar flex jc-between ai-center'>
       <Link to='/'>
@@ -30,7 +33,7 @@ const Navbar = () => {
         check from token, if user is not login:
         show login & register button
       */}
-      {!user.token && (
+      {!user.token && location !== '/admin' && (
         <>
           <NavbarButton setRegister={setRegister} setLogin={setLogin} />
 

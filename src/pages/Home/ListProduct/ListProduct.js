@@ -13,6 +13,7 @@ const ListProduct = () => {
   // init state
   const [products, setProducts] = useState(null)
   const [maxPrice, setMaxPrice] = useState('')
+  const [isFilterActive, setFilterActive] = useState(false)
 
   // init lifecycle
   useEffect(() => {
@@ -28,10 +29,12 @@ const ListProduct = () => {
         return product.price <= maxPrice
       })
     })
+    setFilterActive(true)
   }
 
   const cleanFilter = () => {
     setProducts(dataProducts)
+    setFilterActive(false)
     setMaxPrice('')
   }
 
@@ -50,12 +53,15 @@ const ListProduct = () => {
               onChange={(e) => setMaxPrice(e.target.value)}
             />
           </div>
-          <button className='btn' onClick={applyFilter}>
-            Filter
-          </button>
-          <button className='btn' onClick={cleanFilter}>
-            Clean Filter
-          </button>
+          {!isFilterActive ? (
+            <button className='btn' onClick={applyFilter}>
+              Filter
+            </button>
+          ) : (
+            <button className='btn' onClick={cleanFilter}>
+              Clean Filter
+            </button>
+          )}
         </div>
       </div>
       <div className='home-list-product container'>

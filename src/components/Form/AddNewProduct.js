@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router'
 import { API, configFormData } from '../../config/api'
 
 import PopUp from '../PopUp/PopUp'
@@ -19,6 +20,8 @@ const AddNewProduct = () => {
   const [onProcess, setProcess] = useState(false)
   const [isSuccess, setSuccess] = useState(false)
   const [error, setError] = useState(null)
+
+  const history = useHistory()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -51,7 +54,7 @@ const AddNewProduct = () => {
       setSuccess(false)
     }, 3000)
     setTimeout(() => {
-      window.location.href = '/'
+      history.push('/')
     }, 4000)
   }
 

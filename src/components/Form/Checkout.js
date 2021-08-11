@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { API, configFormData } from '../../config/api'
 import { CartContext } from '../../contexts/CartContext'
 
@@ -25,6 +25,8 @@ const Checkout = () => {
   const [onProcess, setProcess] = useState(false)
   const [isSuccess, setSuccess] = useState(false)
   const [error, setError] = useState(null)
+
+  const history = useHistory()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -70,7 +72,7 @@ const Checkout = () => {
 
     // redirect to profile page
     setTimeout(() => {
-      window.location.href = '/profile'
+      history.push('/profile')
     }, 5000)
   }
 
