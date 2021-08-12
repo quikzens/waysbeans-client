@@ -2,7 +2,6 @@ import axios from 'axios'
 
 export const API = axios.create({
   baseURL: 'https://waysbeans-api.herokuapp.com/api/v1',
-  // baseURL: 'http://localhost:3000/api/v1',
 })
 
 export const setAuthToken = (token) => {
