@@ -1,7 +1,7 @@
-import React, { useState, useContext } from 'react'
+import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { API, configFormData } from '../../config/api'
-import { CartContext } from '../../contexts/CartContext'
+import { useCart } from '../../contexts/CartContext'
 
 import OnProcess from '../OnProcess/OnProcess'
 import PopUp from '../PopUp/PopUp'
@@ -11,7 +11,7 @@ import './Form.css'
 
 const Checkout = () => {
   // init context
-  const { storeCarts, cleanCarts, total, totalQty } = useContext(CartContext)
+  const { storeCarts, cleanCarts, total, totalQty } = useCart()
 
   // init state
   const [form, setForm] = useState({

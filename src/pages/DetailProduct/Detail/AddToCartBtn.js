@@ -1,9 +1,9 @@
-import React, { useContext } from 'react'
-import { CartContext } from '../../../contexts/CartContext'
+import React from 'react'
+import { useCart } from '../../../contexts/CartContext'
 
 const AddToCartBtn = (props) => {
   // init context
-  const { addCart } = useContext(CartContext)
+  const { addCart } = useCart()
 
   // init props
   const { productId, price, product } = props

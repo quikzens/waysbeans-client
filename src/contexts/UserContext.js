@@ -1,9 +1,9 @@
-import { createContext, useState, useEffect } from 'react'
+import { createContext, useState, useEffect, useContext } from 'react'
 import { API, configJSON, setAuthToken } from '../config/api'
 
 export const UserContext = createContext()
 
-export const UserContextProvider = ({ children }) => {
+export const UserProvider = ({ children }) => {
   // init state
   const [user, setUser] = useState({})
 
@@ -81,4 +81,12 @@ export const UserContextProvider = ({ children }) => {
       {children}
     </UserContext.Provider>
   )
+}
+
+export const useUser = () => {
+  const context = useContext(UserContext)
+  if (context === undefined) {
+    throw new Error('useUser must be used within a CountProvider')
+  }
+  return context
 }

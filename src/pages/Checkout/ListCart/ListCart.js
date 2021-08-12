@@ -1,5 +1,5 @@
-import React, { useContext } from 'react'
-import { CartContext } from '../../../contexts/CartContext'
+import React from 'react'
+import { useCart } from '../../../contexts/CartContext'
 import formatPrice from '../../../utils/formatPrice'
 
 import CartItem from '../../../components/CartItem/CartItem'
@@ -8,7 +8,7 @@ import './ListCart.css'
 
 const ListCart = () => {
   // init context
-  const { carts, total } = useContext(CartContext)
+  const { carts, total } = useCart()
 
   if (carts.length > 0) {
     return (

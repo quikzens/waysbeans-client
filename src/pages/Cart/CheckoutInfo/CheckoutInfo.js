@@ -1,5 +1,5 @@
-import React, { useContext } from 'react'
-import { CartContext } from '../../../contexts/CartContext'
+import React from 'react'
+import { useCart } from '../../../contexts/CartContext'
 import formatPrice from '../../../utils/formatPrice'
 
 import CheckoutBtn from './CheckoutBtn'
@@ -8,7 +8,7 @@ import './CheckoutInfo.css'
 
 const CheckoutInfo = () => {
   // init context
-  const { carts, total } = useContext(CartContext)
+  const { carts, total } = useCart()
 
   return (
     <div className='checkout-info'>

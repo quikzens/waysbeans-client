@@ -1,6 +1,6 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { UserContext } from '../../contexts/UserContext'
+import { useUser } from '../../contexts/UserContext'
 
 import {
   logout as logoutIcon,
@@ -11,7 +11,7 @@ import { avatarPlaceholder } from '../../utils/images'
 
 const NavbarDropdown = () => {
   // init context
-  const { user, logout } = useContext(UserContext)
+  const { user, logout } = useUser()
 
   // init state
   const [isActive, setActive] = useState(false)

@@ -1,10 +1,10 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Redirect, Route } from 'react-router-dom'
-import { UserContext } from '../contexts/UserContext'
+import { useUser } from '../contexts/UserContext'
 
 function AdminRoute({ component: Component, ...rest }) {
   // init context
-  const { user } = useContext(UserContext)
+  const { user } = useUser()
 
   // init state
   const [isLoading, setLoading] = useState(true)

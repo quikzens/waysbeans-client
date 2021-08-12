@@ -1,12 +1,12 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import { CartContext } from '../../contexts/CartContext'
+import { useCart } from '../../contexts/CartContext'
 
 import { cart } from '../../utils/icons'
 
 const NavbarCart = () => {
   // init context
-  const { totalQty } = useContext(CartContext)
+  const { totalQty } = useCart()
 
   return (
     <div className='navbar-cart'>

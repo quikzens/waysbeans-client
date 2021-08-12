@@ -1,6 +1,6 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import { CartContext } from '../../contexts/CartContext'
+import { useCart } from '../../contexts/CartContext'
 
 import ReviewCart from './ReviewCart/ReviewCart'
 import CheckoutInfo from './CheckoutInfo/CheckoutInfo'
@@ -9,7 +9,7 @@ import './Cart.css'
 
 const Cart = () => {
   // init context
-  const { carts } = useContext(CartContext)
+  const { carts } = useCart()
 
   return (
     <div className='cart container'>

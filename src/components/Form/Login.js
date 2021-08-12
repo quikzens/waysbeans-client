@@ -1,11 +1,11 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { UserContext } from '../../contexts/UserContext'
+import React, { useEffect, useState } from 'react'
+import { useUser } from '../../contexts/UserContext'
 
 import './Form.css'
 
 const Login = ({ isAdmin }) => {
   // init context
-  const { login } = useContext(UserContext)
+  const { login } = useUser()
 
   // init state
   const [form, setForm] = useState({

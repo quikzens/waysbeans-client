@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import { UserContextProvider } from './contexts/UserContext'
-import { CartContextProvider } from './contexts/CartContext'
+import { UserProvider } from './contexts/UserContext'
+import { CartProvider } from './contexts/CartContext'
 
 import UserRoute from './routes/UserRoute'
 import AdminRoute from './routes/AdminRoute'
@@ -16,8 +16,8 @@ import AddProduct from './pages/AddProduct/AddProduct'
 
 const App = () => {
   return (
-    <UserContextProvider>
-      <CartContextProvider>
+    <UserProvider>
+      <CartProvider>
         <Router>
           <Navbar />
           <Switch>
@@ -36,8 +36,8 @@ const App = () => {
             <AdminRoute exact path='/addproduct' component={AddProduct} />
           </Switch>
         </Router>
-      </CartContextProvider>
-    </UserContextProvider>
+      </CartProvider>
+    </UserProvider>
   )
 }
 

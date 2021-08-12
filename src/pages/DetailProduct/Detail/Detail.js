@@ -1,5 +1,5 @@
-import React, { useContext } from 'react'
-import { UserContext } from '../../../contexts/UserContext'
+import React from 'react'
+import { useUser } from '../../../contexts/UserContext'
 import formatPrice from '../../../utils/formatPrice'
 
 import AddToCartBtn from './AddToCartBtn'
@@ -8,7 +8,7 @@ import './Detail.css'
 
 const Detail = (props) => {
   // init context
-  const { user } = useContext(UserContext)
+  const { user } = useUser()
 
   // init props
   const { _id, name, stock, description, price } = props.product

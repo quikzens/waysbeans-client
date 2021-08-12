@@ -1,9 +1,9 @@
-import { createContext, useState, useEffect } from 'react'
+import { createContext, useState, useEffect, useContext } from 'react'
 import { API, configJSON } from '../config/api'
 
 export const CartContext = createContext()
 
-export const CartContextProvider = ({ children }) => {
+export const CartProvider = ({ children }) => {
   // init state
   const [carts, setCarts] = useState([])
   const [total, setTotal] = useState(0)
@@ -188,4 +188,12 @@ export const CartContextProvider = ({ children }) => {
       {children}
     </CartContext.Provider>
   )
+}
+
+export const useCart = () => {
+  const context = useContext(CartContext)
+  if (context === undefined) {
+    throw new Error('useCart must be used within a CountProvider')
+  }
+  return context
 }

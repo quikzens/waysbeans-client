@@ -1,6 +1,6 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { UserContext } from '../../contexts/UserContext'
+import { useUser } from '../../contexts/UserContext'
 
 import NavbarButton from './NavbarButton'
 import NavbarCart from './NavbarCart'
@@ -14,7 +14,7 @@ import './Navbar.css'
 
 const Navbar = () => {
   // init context
-  const { user } = useContext(UserContext)
+  const { user } = useUser()
 
   // init state
   const [isRegisterShow, setRegister] = useState(false)
